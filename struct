@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+typedef struct Auto
+{
+    char modello[20];
+    int cilindrata;
+    double prezzo;
+    char marca[20];
+    int anno_di_immatricolazione;
+}t_Auto;
+
+int main()
+{
+    t_Auto magazzino[100],A1;
+    int ind=0;
+    int num;
+    while (1)
+    {
+        printf("Scegli un opzione\n");
+        printf("[1]Inserisci\n");
+        printf("[2]Prezzo più alto/basso\n");
+        printf("[3]Ordina in base anno di immatricolazione\n");
+        printf("[4]\n");
+        printf("[0]Esci\n");
+        scanf("%d",&num);
+        switch (num)
+        {
+            case 0:
+                exit(0);
+            break;
+            case 1:
+                printf("Inserisci marca");
+                scanf("%s",A1.marca);
+                printf("Inserisci modello");
+                scanf("%s",A1.modello);
+                printf("Inserisci cilindrata");
+                scanf("%s",A1.cilindrata);
+                printf("Inserisci prezzo");
+                scanf("%s",A1.prezzo);
+                printf("Inserisci anno di immatricolazione");
+                scanf("%s",A1.anno di immatricolazione);
+        }
+        
+        
+
+    }
