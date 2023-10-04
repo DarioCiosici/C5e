@@ -11,11 +11,37 @@ typedef struct Auto
     int anno_di_immatricolazione;
 }t_Auto;
 
+void piùCostosa(t_Auto magazzino[], int ind,int *alto,int *basso)
+{
+    double altoNum=magazzino[0].prezzo,bassoNum=magazzino[0].prezzo;
+    for(int i=0;i<ind;i++)
+    {
+        if(altoNum<magazzino[i]){
+            altoNum=magazzino[i];
+            alto=i;
+        }
+        if(bassoNum>magazzino)
+        {
+            bassoNum=magazzino[i];
+            basso=i;
+        }
+    }
+}
+
+char[] visualizza(t_Auto auto)
+{
+    char risultato[127];
+    sprintf(risultato,"Marca:%s Modello:%s Cilindrata:%d Prezzo:%f Anno:%d");
+    return risultato;
+}
+
+
+
 int main()
 {
     t_Auto magazzino[100],A1;
     int ind=0;
-    int num;
+    int num,alto,basso;
     while (1)
     {
         printf("Scegli un opzione\n");
@@ -31,6 +57,7 @@ int main()
                 exit(0);
             break;
             case 1:
+            if(ind!=99){
                 printf("Inserisci marca");
                 scanf("%s",A1.marca);
                 printf("Inserisci modello");
@@ -41,8 +68,23 @@ int main()
                 scanf("%s",A1.prezzo);
                 printf("Inserisci anno di immatricolazione");
                 scanf("%s",A1.anno di immatricolazione);
+                magazzino[ind]=A1;
+                ind++;
+            }
+            break;
+            case 2:
+                piùCostosa(magazzino,ind,&alto,&basso);
+                printf("%s\n"visualizza(magazzino[alto]));
+                printf("%s\n"visualizza(magazzino[basso]));
+                break;
+            case 3:
+
         }
         
+        
+
+    }
+}
         
 
     }
